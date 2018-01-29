@@ -10,6 +10,11 @@
 
 @interface GCD : NSObject
 
++ (void)gcd_set_queue_priority;
++ (void)gcd_group_notify;
++ (void)gcd_barrier;
++ (int)gcd_group_wait;
++ (void)gcd_block_wait;
 + (void)gcd_semaphore;
 
 @end

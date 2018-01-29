@@ -25,9 +25,27 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)test_gcd_set_queue_priority {
+    [GCD gcd_set_queue_priority];
+}
+
+- (void)test_gcd_group_notify {
+    [GCD gcd_group_notify];
+}
+
+- (void)test_gcd_barrier {
+    [GCD gcd_barrier];
+}
+
+- (void)test_gcd_group_wait {
+    [GCD gcd_group_wait];
+}
+
+- (void)test_gcd_block_wait {
+    [GCD gcd_block_wait];
+}
+
+- (void)test_gcd_semaphore {
     [GCD gcd_semaphore];
 }
 
