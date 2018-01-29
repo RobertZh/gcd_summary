@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		72ED7272201EB85B008C0B95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ED7271201EB85B008C0B95 /* main.m */; };
+		72ED727A201EB9AB008C0B95 /* GCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ED7279201EB9AB008C0B95 /* GCD.m */; };
+		72ED729E201EC2B5008C0B95 /* GCDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ED729D201EC2B5008C0B95 /* GCDTests.m */; };
+		72ED730E201EC714008C0B95 /* GCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 72ED7279201EB9AB008C0B95 /* GCD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +28,22 @@
 /* Begin PBXFileReference section */
 		72ED726E201EB85A008C0B95 /* GCDSummary */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GCDSummary; sourceTree = BUILT_PRODUCTS_DIR; };
 		72ED7271201EB85B008C0B95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		72ED7278201EB9AB008C0B95 /* GCD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCD.h; sourceTree = "<group>"; };
+		72ED7279201EB9AB008C0B95 /* GCD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCD.m; sourceTree = "<group>"; };
+		72ED729B201EC2B5008C0B95 /* GCDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GCDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		72ED729D201EC2B5008C0B95 /* GCDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDTests.m; sourceTree = "<group>"; };
+		72ED729F201EC2B5008C0B95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		72ED726B201EB85A008C0B95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72ED7298201EC2B5008C0B95 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				72ED7270201EB85A008C0B95 /* GCDSummary */,
+				72ED729C201EC2B5008C0B95 /* GCDTests */,
 				72ED726F201EB85A008C0B95 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				72ED726E201EB85A008C0B95 /* GCDSummary */,
+				72ED729B201EC2B5008C0B95 /* GCDTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +75,19 @@
 			isa = PBXGroup;
 			children = (
 				72ED7271201EB85B008C0B95 /* main.m */,
+				72ED7278201EB9AB008C0B95 /* GCD.h */,
+				72ED7279201EB9AB008C0B95 /* GCD.m */,
 			);
 			path = GCDSummary;
+			sourceTree = "<group>";
+		};
+		72ED729C201EC2B5008C0B95 /* GCDTests */ = {
+			isa = PBXGroup;
+			children = (
+				72ED729D201EC2B5008C0B95 /* GCDTests.m */,
+				72ED729F201EC2B5008C0B95 /* Info.plist */,
+			);
+			path = GCDTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +110,23 @@
 			productReference = 72ED726E201EB85A008C0B95 /* GCDSummary */;
 			productType = "com.apple.product-type.tool";
 		};
+		72ED729A201EC2B5008C0B95 /* GCDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72ED72A0201EC2B5008C0B95 /* Build configuration list for PBXNativeTarget "GCDTests" */;
+			buildPhases = (
+				72ED7297201EC2B5008C0B95 /* Sources */,
+				72ED7298201EC2B5008C0B95 /* Frameworks */,
+				72ED7299201EC2B5008C0B95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GCDTests;
+			productName = GCDTests;
+			productReference = 72ED729B201EC2B5008C0B95 /* GCDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +137,10 @@
 				ORGANIZATIONNAME = zhangwei;
 				TargetAttributes = {
 					72ED726D201EB85A008C0B95 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					72ED729A201EC2B5008C0B95 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
@@ -110,16 +159,37 @@
 			projectRoot = "";
 			targets = (
 				72ED726D201EB85A008C0B95 /* GCDSummary */,
+				72ED729A201EC2B5008C0B95 /* GCDTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		72ED7299201EC2B5008C0B95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		72ED726A201EB85A008C0B95 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72ED727A201EB9AB008C0B95 /* GCD.m in Sources */,
 				72ED7272201EB85B008C0B95 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72ED7297201EC2B5008C0B95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72ED730E201EC714008C0B95 /* GCD.m in Sources */,
+				72ED729E201EC2B5008C0B95 /* GCDTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,6 +303,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -241,6 +312,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		72ED72A1201EC2B5008C0B95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GCDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = robert.GCDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		72ED72A2201EC2B5008C0B95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GCDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = robert.GCDTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -262,6 +358,15 @@
 			buildConfigurations = (
 				72ED7276201EB85B008C0B95 /* Debug */,
 				72ED7277201EB85B008C0B95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72ED72A0201EC2B5008C0B95 /* Build configuration list for PBXNativeTarget "GCDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72ED72A1201EC2B5008C0B95 /* Debug */,
+				72ED72A2201EC2B5008C0B95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
